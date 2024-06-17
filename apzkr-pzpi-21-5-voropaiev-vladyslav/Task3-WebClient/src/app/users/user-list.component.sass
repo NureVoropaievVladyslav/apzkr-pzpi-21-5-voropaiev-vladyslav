@@ -1,0 +1,55 @@
+@import "src/styles.sass"
+
+.container
+  button
+    display: inline-flex
+    align-items: center
+    gap: .25rem
+    margin-right: .5rem
+    padding: .5rem  1rem
+    border-radius: 50px
+    outline: none
+    border: none
+    background: rgba($primary, 20%)
+    color: $primary
+    cursor: pointer
+
+    &:hover
+      background: rgba($primary, 50%)
+
+    svg
+      aspect-ratio: 1
+      width: 24px
+      vertical-align: center
+
+      path
+        fill: $primary
+
+  table
+    width: 100%
+    border-collapse: collapse
+    margin-top: 1rem
+
+    thead
+      text-align: left
+      background: rgba($primary, 50%)
+
+      th:first-child
+        border-top-left-radius: 10px
+
+      th:last-child
+        border-top-right-radius: 10px
+
+    tbody
+      tr:nth-child(even)
+        background: rgba($primary, 20%)
+
+      tr:last-child
+        td:first-child
+          border-bottom-left-radius: 10px
+
+        td:last-child
+          border-bottom-right-radius: 10px
+
+    th, td
+      padding: .5rem 1rem

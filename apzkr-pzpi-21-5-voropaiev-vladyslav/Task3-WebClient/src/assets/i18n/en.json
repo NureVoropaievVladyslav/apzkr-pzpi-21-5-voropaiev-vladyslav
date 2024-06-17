@@ -1,0 +1,27 @@
+{
+  "USERS":{
+    "TITLE": "Users",
+    "ID": "ID",
+    "FULLNAME": "Fullname",
+    "EMAIL": "Email",
+    "USERNAME": "Username",
+    "ROLE": "Role",
+    "REGISTRATION_DATE": "Registration Date",
+    "ADMIN": "Admin",
+    "EMPLOYEE": "Employee"
+  },
+  "ACTIONS": {
+    "SAVE_TO_PDF": "Save to PDF",
+    "EXPORT": "Export",
+    "IMPORT": "Import",
+    "MAKE_ADMIN": "Make Admin",
+    "DELETE": "Delete"
+  },
+  "PONDS": {
+    "TITLE": "Ponds",
+    "ID": "ID",
+    "FISH_SPECIES": "Fish species",
+    "FISH_POPULATION": "Fish population",
+    "CREATION_DATE": "Creation date"
+  }
+}

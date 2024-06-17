@@ -1,0 +1,44 @@
+@import 'src/styles.sass'
+
+nav
+  display: flex
+  justify-content: space-between
+  width: 100%
+  margin-bottom: 2rem
+
+  img
+    height: 36px
+
+  ul
+    li
+      display: inline
+      margin-right: 3rem
+
+      a
+        padding: .5rem 1rem
+        border-radius: 50px
+        text-decoration: none
+        color: $text
+        text-transform: uppercase
+
+        &.active, &:hover
+          background: rgba($primary, 20%)
+
+  .controls
+    display: flex
+    gap: 1rem
+    align-items: center
+
+    svg
+      aspect-ratio: 1
+      width: 1.5rem
+      cursor: pointer
+
+      path
+        fill: $text
+
+    svg:first-child:hover path
+      fill: rgba($primary, 50%)
+
+    svg:last-child:hover path
+      fill: darkred

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Presentation.Views.PondsPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Domain.Entities;assembly=Domain"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:viewModels="clr-namespace:Presentation.ViewModels"
+             x:Name="Page"
+             x:DataType="viewModels:PondViewModel">
+
+    <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior Command="{Binding Loaded}"
+                                        EventName="Appearing" />
+    </ContentPage.Behaviors>
+
+    <StackLayout Padding="20">
+        <StackLayout IsVisible="{Binding IsCurrentEntitySet}">
+            <Label FontAttributes="Bold"
+                   FontSize="Large"
+                   x:Name="FeedingSchedule" />
+            <Frame
+                CornerRadius="10"
+                HorizontalOptions="Center" 
+                VerticalOptions="Center"
+                HasShadow="True"
+                IsClippedToBounds="True"
+                BackgroundColor="#4E5373"
+                BorderColor="#4E5373"
+                Margin="0, 15">
+                
+                <StackLayout
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="300">
+                    
+                    <Label x:Name="FeedingFrequency" />
+                    <Entry Text="{Binding CurrentEntity.FeedingSchedule.FeedingFrequencyInHours}" />
+                    
+                    <Label x:Name="FoodAmount" />
+                    <Entry Text="{Binding CurrentEntity.FeedingSchedule.FoodAmount}" />
+                </StackLayout>
+            </Frame>
+            
+            <Button Margin="0, 15"
+                    Command="{Binding Update}"
+                    x:Name="Update" 
+                    BackgroundColor="#A57B80"/>
+            <Button Margin="0, 15"
+                    Command="{Binding BackToList}"
+                    x:Name="BackToList" />
+        </StackLayout>
+        <StackLayout IsVisible="{Binding IsCurrentEntityNotSet}">
+            <ListView ItemsSource="{Binding Entities}"
+                      SelectionMode="Single"
+                      RowHeight="100">
+                <ListView.Behaviors>
+                    <toolkit:EventToCommandBehavior Command="{Binding GetEntity}"
+                                                    x:TypeArguments="SelectedItemChangedEventArgs"
+                                                    EventName="ItemSelected" />
+                </ListView.Behaviors>
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Pond">
+                            <ViewCell>
+                                <StackLayout VerticalOptions="FillAndExpand">
+                                    <Label x:Name="IdLabel" TextColor="#E8F7F3" Text="{Binding Id, StringFormat='ID: {0}'}" />
+                                    <Label x:Name="FishSpeciesLabel" TextColor="#E8F7F3" Text="{Binding FishSpecies, StringFormat='Fish Species: {0}'}" />
+                                    <Label x:Name="FishPopulationLabel" TextColor="#E8F7F3" Text="{Binding FishPopulation, StringFormat='Fish Population: {0}'}" />
+                                </StackLayout>
+                            </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,53 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="EmailNotValid" xml:space="preserve">
+        <value>Адреса електронної пошти не є дійсною.</value>
+    </data>
+    <data name="FullNameMustBeEightCharacters" xml:space="preserve">
+        <value>Повне ім'я повинно містити щонайменше 8 символів.</value>
+    </data>
+    <data name="UsernameMustBeFiveCharacters" xml:space="preserve">
+        <value>Ім'я користувача повинно мати довжину не менше 5 символів.</value>
+    </data>
+    <data name="UsernameMustContainOnlyLowercase" xml:space="preserve">
+        <value>Ім'я користувача може містити тільки малі літери.</value>
+    </data>
+    <data name="RequiredField" xml:space="preserve">
+        <value>Поле обов'язкове.</value>
+    </data>
+    <data name="EmailUnavailable" xml:space="preserve">
+        <value>Адреса електронної пошти вже використовується.</value>
+    </data>
+    <data name="PasswordNoMatch" xml:space="preserve">
+        <value>Пароль не збігається.</value>
+    </data>
+    <data name="GreaterThanZero" xml:space="preserve">
+        <value>Значення повинно бути більше нуля.</value>
+    </data>
+    <data name="InvalidFishSpecie" xml:space="preserve">
+        <value>Вид риби є недійсним.</value>
+    </data>
+    <data name="PasswordBoundaries" xml:space="preserve">
+        <value>Пароль повинен містити від 8 до 32 символів.</value>
+    </data>
+    <data name="PasswordCharacters" xml:space="preserve">
+        <value>Пароль повинен містити принаймні одну велику літеру, одну малу літеру, одну цифру та один спеціальний символ.</value>
+    </data>
+    <data name="DataNotFound" xml:space="preserve">
+        <value>Дані не знайдено.</value>
+    </data>
+    <data name="UserAlreadyExists" xml:space="preserve">
+        <value>Користувач з такими обліковими даними вже існує.</value>
+    </data>
+</root>

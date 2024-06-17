@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Presentation.Views.LoginPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels1="clr-namespace:Presentation.ViewModels"
+             Title="Login"
+             x:DataType="viewModels1:LoginViewModel"
+             BackgroundColor="#3E425B">
+    
+    
+    <ContentPage.Content>
+        
+        <Frame
+            CornerRadius="10"
+            HorizontalOptions="Center" 
+            VerticalOptions="Center"
+            HasShadow="True"
+            IsClippedToBounds="True"
+            BackgroundColor="#4E5373"
+            BorderColor="#4E5373">
+            <StackLayout 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="300">
+                <Image Source="logo.png"
+                       Aspect="AspectFit"
+                       HeightRequest="100"
+                       Margin="0, 0, 0, 25"
+                       SemanticProperties.Description="dot net bot in a race car number eight" />
+                
+                <Entry 
+                    Placeholder="Username" 
+                    HorizontalOptions="FillAndExpand" 
+                    Margin="5" 
+                    Text="{Binding Login}"
+                    TextColor="#E8F7F3"/>
+                <Entry 
+                    Placeholder="Password" 
+                    IsPassword="True" 
+                    HorizontalOptions="FillAndExpand" 
+                    Margin="5" 
+                    Text="{Binding Password}"
+                    TextColor="#E8F7F3"/>
+                <Button 
+                    BackgroundColor="#E8F7F3" 
+                    TextColor="#323232" 
+                    Command="{Binding LoginCommand}" 
+                    Text="Login" 
+                    HorizontalOptions="FillAndExpand" 
+                    Margin="10"/>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>
